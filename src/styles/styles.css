@@ -1,0 +1,370 @@
+/* Consolidated professional CSS from src/styles/main.css */
+/* resets and global styles  */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+nav,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+main,
+mark,
+meter,
+nav,
+output,
+progress,
+section,
+time,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1.35;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button {
+  font: inherit;
+}
+
+:root {
+  box-sizing: border-box;
+  /* Palette */
+  --black: #0b0b0c;
+  --offblack: #111113;
+  --white: #ffffff;
+  --offwhite: #f6f6f6;
+  --gray100: #eaeaea;
+  --gray200: #d6d6d6;
+  --gray500: #8a8a8a;
+  --gray700: #3a3a3a;
+
+  /* Type scale & spacing */
+  --fs-hero: clamp(3.36rem, 3.5vw + 1.6rem, 6.8rem);
+  --fs-h2: clamp(2rem, 1.5vw + 1.28rem, 2.8rem);
+  --fs-base: clamp(1.52rem, 0.8vw + 1.36rem, 1.6rem);
+  --space-xs: clamp(0.8rem, 0.96vw, 1.2rem);
+  --space-sm: clamp(1.2rem, 1.6vw, 1.6rem);
+  --space-md: clamp(1.6rem, 1.92vw, 2.4rem);
+  --container: min(1200px, 92%);
+  /* Page padding variables (maiores para melhor leitura) */
+  --page-padding: var(--space-md);
+  --page-padding-sm: var(--space-sm);
+  --page-padding-lg: clamp(3.2rem, 3vw, 6.4rem);
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+body {
+  background: var(--offwhite);
+  color: var(--black);
+  font-size: var(--fs-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  /* padding: var(--page-padding); */
+}
+
+/* Utility */
+.mobile-panel {
+  /* regras movidas para o escopo mobile */
+}
+.site-header.scrolled {
+  background: var(--white);
+  box-shadow: 0 1px 0 rgba(10, 10, 10, 0.04);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--gray100);
+}
+
+/* header link color: white when over hero, switch to black when scrolled */
+.site-header .nav-link,
+.site-header .brand,
+.site-header .icon-btn {
+  color: var(--white);
+}
+.site-header.scrolled .nav-link,
+.site-header.scrolled .brand,
+.site-header.scrolled .icon-btn {
+  color: var(--black);
+}
+
+.header-inner {
+  height: 12rem;
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  background: var(--offblack);
+}
+
+.brand {
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  color: var(--black);
+  text-align: center;
+}
+.nav {
+  display: block;
+}
+.nav-list {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+.nav-link {
+  color: var(--black);
+  position: relative;
+  padding: 0.25rem 0;
+  font-weight: 500;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 0;
+  background: var(--black);
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+/* Header controls */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icon-btn {
+  background: transparent;
+  border: 0;
+  color: var(--black);
+  padding: 0.35rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-btn:focus {
+  outline: 2px solid var(--gray200);
+  outline-offset: 2px;
+}
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0.4rem;
+}
+.hamburger-box {
+  display: inline-block;
+  width: 26px;
+  height: 20px;
+  position: relative;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 26px;
+  height: 2px;
+  background: var(--black);
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+}
+.hamburger-inner {
+  top: 9px;
+}
+.hamburger-inner::before {
+  content: "";
+  top: -9px;
+}
+.hamburger-inner::after {
+  content: "";
+  top: 9px;
+}
+
+.mobile-panel {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--white);
+  border-top: 1px solid var(--gray100);
+  transform: translateY(-100%);
+  transition: transform 0.28s cubic-bezier(0.22, 0.9, 0.2, 1);
+  z-index: 9998;
+  overflow: hidden;
+}
+
+.mobile-panel.open {
+  transform: translateY(0);
+}
+.mobile-panel {
+  display: none;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+}
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../assets/images/brands-bg.png");
+  transform-origin: center center;
+}
+
+/* Compatibility helpers for pages using different classnames */
+.wrap,
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.section {
+  padding: 3rem 0;
+}
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+.cat-tile {
+  display: block;
+  border: 1px solid var(--gray100);
+  padding: 1.6rem;
+  background: var(--white);
+}
+.product-card {
+  border: 1px solid var(--gray100);
+  padding: 0.8rem;
+  background: var(--white);
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

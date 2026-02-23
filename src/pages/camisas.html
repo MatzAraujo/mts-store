@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Camisas — MG Concept</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+</head>
+
+<body data-category="Camisas">
+    <header class="site-header" id="siteHeader">
+        <div class="wrap"><a class="brand" href="../main.html">MG Concept</a>
+            <nav class="nav">
+                <a href="/pages/camisas.html">Camisas</a>
+                <a href="/pages/tenis.html">Tênis</a>
+                <a href="/pages/calcas.html">Calças</a>
+                <a href="/pages/acessorios.html">Acessórios</a>
+            </nav>
+            <button id="cartBtn" aria-label="Abrir carrinho">Carrinho</button>
+        </div>
+    </header>
+
+    <main class="category-hero">
+        <div class="wrap">
+            <div class="breadcrumb">Home / Camisas</div>
+            <h1>Camisas</h1>
+            <p class="subtitle">Tecidos nobres. Corte atemporal. Seleção curada para o vestuário essencial.</p>
+            <span class="badge">Curadoria MG</span>
+        </div>
+    </main>
+
+    <section class="category-shell wrap">
+        <aside class="filters" id="filtersSidebar" aria-label="Filtros">
+            <div class="filters-inner" id="filtersInner"></div>
+        </aside>
+
+        <div class="category-content">
+            <div class="toolbar" id="toolbar">
+                <div class="results">Exibindo <span id="resultsCount">24</span> produtos</div>
+                <div class="controls">
+                    <button id="openFilters" aria-label="Abrir filtros">Filtros</button>
+                    <select id="sortSelect" aria-label="Ordenar">
+                        <option>Relevância</option>
+                        <option>Novidades</option>
+                        <option>Preço: menor</option>
+                        <option>Preço: maior</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="activeChips" class="active-chips"></div>
+
+            <div id="productsGrid" class="products-grid"></div>
+
+            <div class="load-more-wrap"><button id="loadMore">Carregar mais</button></div>
+        </div>
+    </section>
+
+    <div id="quickView" class="quickview" aria-hidden="true"></div>
+
+    <footer class="site-footer">
+        <div class="wrap">© MG Concept</div>
+    </footer>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/category.js"></script>
+</body>
+
+</html>
