@@ -149,6 +149,7 @@ button {
 html {
   font-size: 62.5%;
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   height: 100%;
@@ -168,12 +169,12 @@ body {
 .mobile-panel {
   /* regras movidas para o escopo mobile */
 }
-.site-header.scrolled {
+/* .site-header.scrolled {
   background: var(--white);
   box-shadow: 0 1px 0 rgba(10, 10, 10, 0.04);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--gray100);
-}
+} */
 
 /* header link color: white when over hero, switch to black when scrolled */
 .site-header .nav-link,
@@ -181,11 +182,11 @@ body {
 .site-header .icon-btn {
   color: var(--white);
 }
-.site-header.scrolled .nav-link,
+/* .site-header.scrolled .nav-link,
 .site-header.scrolled .brand,
 .site-header.scrolled .icon-btn {
   color: var(--black);
-}
+} */
 
 .header-inner {
   height: 12rem;
@@ -195,14 +196,14 @@ body {
   gap: 1rem;
   justify-content: space-between;
   background: var(--offblack);
+  position: fixed;
+  width: 100%;
 }
 
-.brand {
-  font-weight: 500;
-  font-size: 2rem;
-  letter-spacing: 0.06em;
-  color: var(--black);
-  text-align: center;
+.brand >img {
+  display: inline-flex;
+  height: 11rem;
+  align-items: center;
 }
 .nav {
   display: block;
@@ -343,7 +344,7 @@ body {
 /* Compatibility helpers for pages using different classnames */
 .wrap,
 .container {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 0 auto;
   padding: 2rem;
 }
@@ -387,6 +388,6 @@ body {
 }
 
 /* ensure visible when scrolled */
-.site-header.scrolled .hamburger {
+/* .site-header.scrolled .hamburger {
   color: var(--black);
-}
+} */

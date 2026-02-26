@@ -1,4 +1,6 @@
 /* resets and global styles  */
+
+@import url(./styles.css);
 *,
 *::before,
 *::after {
@@ -167,12 +169,12 @@ body {
 .mobile-panel {
   /* regras movidas para o escopo mobile */
 }
-.site-header.scrolled {
+/* .site-header.scrolled {
   background: var(--white);
   box-shadow: 0 1px 0 rgba(10, 10, 10, 0.04);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--gray100);
-}
+} */
 
 /* header link color: white when over hero, switch to black when scrolled */
 .site-header .nav-link,
@@ -180,11 +182,11 @@ body {
 .site-header .icon-btn {
   color: var(--white);
 }
-.site-header.scrolled .nav-link,
+/* .site-header.scrolled .nav-link,
 .site-header.scrolled .brand,
 .site-header.scrolled .icon-btn {
   color: var(--black);
-}
+} */
 
 .header-inner {
   height: 12rem;
@@ -196,13 +198,13 @@ body {
   background: var(--offblack);
 }
 
-.brand {
+/* .brand {
   font-weight: 500;
   font-size: 2rem;
   letter-spacing: 0.06em;
   color: var(--black);
   text-align: center;
-}
+} */
 .nav {
   display: block;
 }
@@ -389,7 +391,7 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 6rem 0;
+  padding: 14rem 0;
 }
 .hero-left {
   flex: 0 0 55%;
@@ -787,10 +789,9 @@ body {
   .site-header.scrolled .hamburger {
     display: inline-block;
   }
-  .site-header.scrolled .hamburger {
-    /* ensure hamburger is visible when header becomes scrolled */
+  /* .site-header.scrolled .hamburger {
     color: var(--black);
-  }
+  } */
   /* mobile panel (only loaded on mobile) */
   .site-header {
     position: sticky;
@@ -843,6 +844,7 @@ body {
   .hero-left {
     max-width: 100%;
     flex: 1;
+    padding-top: 10rem;
   }
   .hero-right {
     display: none;
@@ -871,9 +873,9 @@ body {
   .product-media {
     height: 200px;
   }
-  .site-header.scrolled {
+  /* .site-header.scrolled {
     padding: 0.25rem 0;
-  }
+  } */
 }
 
 /* prefers-reduced-motion */
