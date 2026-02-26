@@ -581,6 +581,18 @@ body {
 .swiper-slide {
   width: auto;
 }
+
+/* swiper arrow  pagination button */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "";
+}
+
+.swiper-pagination-bullet-active{
+  background: var(--black);
+}
 .product-card {
   background: var(--white);
   border: 1px solid var(--gray100);

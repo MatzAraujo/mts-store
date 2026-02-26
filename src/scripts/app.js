@@ -190,7 +190,10 @@ function initSwiper() {
   const swiper = new Swiper("#productsSwiper", {
     slidesPerView: 1.2,
     spaceBetween: 18,
-    grabCursor: true,
+    grabCursor: false,
+    autoplay: {
+      delay: 4000,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
